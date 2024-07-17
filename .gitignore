@@ -12,4 +12,5 @@
 /arvix_document
 /arvix_vxstor_gpt4all
 /backup
-/*.csv
+/__pycache__
+/vector_db
