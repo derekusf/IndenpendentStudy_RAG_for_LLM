@@ -5,12 +5,14 @@ QA_RAG = "SIMPLE_QUESTION_ANSWER_RAG"
 QUESTION_GENERATOR = "QUESTION_GENERATOR"
 ANSWER_GENERATOR = "ANSWER_GENERATOR"
 EVAL_ANSWER_RELEVANCY = "EVAL_ANSWER_RELEVANCY"
+EVAL_FAITHFULNESS = "EVAL_FAITHFULNESS"
 
 prompt_type = {
     "QA_RAG" : "SIMPLE_QUESTION_ANSWER_RAG",
     "QUESTION_GENERATOR" : "QUESTION_GENERATOR",
     "ANSWER_GENERATOR" : "ANSWER_GENERATOR",
-    "EVAL_ANSWER_RELEVANCY" : "EVAL_ANSWER_RELEVANCY"
+    "EVAL_ANSWER_RELEVANCY" : "EVAL_ANSWER_RELEVANCY",
+    "EVAL_FAITHFULNESS" : "EVAL_FAITHFULNESS"
 }
 
 simple_rag_template = """
@@ -99,6 +101,25 @@ Reference: {ground_truth}
 
 """
 
+evaluate_faithfulness_template = """
+You are Teaching Assistant. Your task is to evaluate student_answer for test_question. You are also given Professor's answer as reference. 
+Your task is to provide a 'total rating' representing how close student_answer is to the reference.
+Give your rating on a scale of 1 to 10, where 1 means that the question is not close at all, and 10 means that the question is extremely close.
+
+Provide your rating as follows:
+
+Total rating: (your rating, as a float number between 1 and 10)
+
+Now here are the question, the student answer and the reference.
+
+Question: {question}
+
+Student Answer: {answer}
+
+Contex: {contexts}
+
+"""
+
 def initPrompt(type) -> ChatPromptTemplate:
     #default
     prompt = ChatPromptTemplate.from_template(simple_rag_template)
@@ -113,4 +134,7 @@ def initPrompt(type) -> ChatPromptTemplate:
 
     if type == prompt_type["EVAL_ANSWER_RELEVANCY"]: 
         prompt = ChatPromptTemplate.from_template(evaluate_answer_relevancy_template) 
+    
+    if type == prompt_type["EVAL_FAITHFULNESS"]: 
+        prompt = ChatPromptTemplate.from_template(evaluate_faithfulness_template)
     return prompt
