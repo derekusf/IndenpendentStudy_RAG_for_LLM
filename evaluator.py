@@ -70,7 +70,8 @@ def generate_question(generator_llm, pdf_documents, mode = ""):
     setup = RunnableParallel(context=RunnablePassthrough())
     question_generation_chain = setup | prompt_template | generator_llm | question_output_parser
     question_context_list = []
- 
+
+    print(f"evaluator.py log >>> START GENERATING QUESTION")
     i = 1
     for text in tqdm(pdf_documents):
         try:
@@ -84,7 +85,7 @@ def generate_question(generator_llm, pdf_documents, mode = ""):
 #        print(f"Context {i} : {question_context["context"]}")
         question_context_list.append(question_context)
         i=i+1
-    
+    print(f"evaluator.py log >>> COMPLETE GENERATING QUESTION")    
     return question_context_list
 
 # Based on provided questions and contexts, request a LLM to generate answers used as ground truths for later evaluation
@@ -109,7 +110,7 @@ def generate_answer(answer_llm, question_context_list, mode = ""):
         | answer_llm 
         | answer_output_parser
     )
-
+    print(f"evaluator.py log >>> START GENERATING ANSWER")
     i = 1
     for record in tqdm(answer):
         try:
@@ -120,6 +121,8 @@ def generate_answer(answer_llm, question_context_list, mode = ""):
             continue
         record["ground_truth"] = response
         i=i+1
+    
+    print(f"evaluator.py log >>> COMPLETE GENERATING ANSWER")
     return answer
 
 def rag_evaluate(rag_pipeline):
@@ -132,7 +135,7 @@ def rag_evaluate(rag_pipeline):
     test_outcome_list = test_rag_pipeline(rag_pipeline, testset_ds)
     evaluate_llm = myllm.connectLLM("LLAMA3_70B")
     test_outcome_list = evaluate_by_metric(evaluate_llm,test_outcome_list,"answer_relevancy")
-    test_outcome_list = evaluate_by_metric(evaluate_llm,test_outcome_list,"answer_relevancy")
+    test_outcome_list = evaluate_by_metric(evaluate_llm,test_outcome_list,"faithfulness")
 
     return test_outcome_list
 
@@ -154,7 +157,7 @@ def evaluate_by_metric(critic_llm, test_outcome_list, metric = "answer_relevancy
         )
 
         i = 1
-        print("start evaluating answer_relevancy")
+        print("evaluator.py log >>> start evaluating answer_relevancy")
         eval_list = []
         for record in tqdm(test_outcome_list):
 #            print(f"Question {i} : {record["question"]}")
@@ -182,6 +185,7 @@ def evaluate_by_metric(critic_llm, test_outcome_list, metric = "answer_relevancy
             )"""
 
             i=i+1
+        print("evaluator.py log >>> end evaluating answer_relevancy")
     # How relevant the answer to the question, in the other word, how close the answer to the ground truth
     if metric == "faithfulness": 
         eval_output_parser = StrOutputParser() #StructuredOutputParser.from_response_schemas(answer_response_schemas)
@@ -197,7 +201,7 @@ def evaluate_by_metric(critic_llm, test_outcome_list, metric = "answer_relevancy
         )
 
         i = 1
-        print("start evaluating faithfulness")
+        print("evaluator.py log >>> start evaluating faithfulness")
         eval_list = []
         for record in tqdm(test_outcome_list):
 #            print(f"Question {i} : {record["question"]}")
@@ -213,6 +217,7 @@ def evaluate_by_metric(critic_llm, test_outcome_list, metric = "answer_relevancy
             
 #            print(f"faithfulness {i} : {record["faithfulness"]}")
             i=i+1
+        print("evaluator.py log >>> start evaluating faithfulness")
     return test_outcome_list # Dataset.from_pandas(pd.DataFrame(eval_list))
 
 # Run testing by letting the RAG pipeline under evaluation answer each question in the testset
@@ -220,6 +225,8 @@ def evaluate_by_metric(critic_llm, test_outcome_list, metric = "answer_relevancy
 def test_rag_pipeline(rag_pipeline, testset_ds):
     i = 1
     test_outcome_list = []
+    print(f"evaluator.py log >>> Start testing with on {len(testset_ds)} question")
+
     for row in tqdm(testset_ds):
         question = row["question"]
         answer = rag_pipeline.invoke(question)
@@ -235,5 +242,5 @@ def test_rag_pipeline(rag_pipeline, testset_ds):
         )
         i= i+1
     test_outcome_ds = Dataset.from_pandas(pd.DataFrame(test_outcome_list))
-    print(f"End testing with {len(test_outcome_ds)} answers on {len(testset_ds)} question")
+    print(f"evaluator.py log >>> End testing with {len(test_outcome_ds)} answers on {len(testset_ds)} question")
     return test_outcome_list

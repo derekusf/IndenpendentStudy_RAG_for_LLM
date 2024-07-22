@@ -1,4 +1,4 @@
-,context,question,answer
+,context,question,ground_truth
 0,"Seven Failure Points When Engineering a Retrieval Augmented
 Generation System
 Scott Barnett, Stefanus Kurniawan, Srikanth Thudumu, Zach Brannelly, Mohamed Abdelrazek
@@ -99,7 +99,7 @@ system? (section 5) We present an empirical experiment using
 the BioASQ data set to report on potential failure points. The
 experiment involved 15,000 documents and 1000 question
 arXiv:2401.05856v1  [cs.SE]  11 Jan 2024
-",Question: What is the name of the conference where the paper was presented?,Answer: 3rd International Conference on AI Engineering — Software Engineering for AI (CAIN 2024)
+",Question: What is the name of the Large Language Model mentioned in the text?,Answer: ChatGPT.
 1,"CAIN 2024, April 2024, Lisbon, Portugal
 Scott Barnett, Stefanus Kurniawan, Srikanth Thudumu, Zach Brannelly, Mohamed Abdelrazek
 and answer pairs. We indexed all documents then ran the
@@ -214,7 +214,7 @@ prompts to obtain an answer. These online services also restrict the
 number of tokens to use within a time frame restricting the latency
 of a system. Software engineers need to consider these tradeoffs
 when designing a RAG system.
-",Question: What is the name of the research direction that the authors propose for RAG systems based on the lessons learned from the three case studies?,Answer: A research direction for RAG systems based on the lessons learned from the 3 case studies.
+",Question: What is the name of the University where two RAG systems are currently running?,Answer: Deakin University.
 2,"Seven Failure Points When Engineering a Retrieval Augmented Generation System
 CAIN 2024, April 2024, Lisbon, Portugal
 Figure 1: Indexing and Query processes required for creating a Retrieval Augmented Generation (RAG) system. The indexing
@@ -287,7 +287,7 @@ and answer pairs. We downloaded 4017 open access documents
 from the BioASQ dataset and had a total of 1000 questions. All
 documents were indexed and the questions asked against the RAG
 system. The generated questions were then evaluated using the
-",Question: What is the total number of questions in the BioASQ dataset used in the case study?,Answer: 1000
+",Question: What is the name of the deep learning model used for video transcription in the AI Tutor system?,Answer: Whisper
 3,"CAIN 2024, April 2024, Lisbon, Portugal
 Scott Barnett, Stefanus Kurniawan, Srikanth Thudumu, Zach Brannelly, Mohamed Abdelrazek
 Case Study
@@ -417,7 +417,7 @@ date on their knowledge). Fine-tuning and RAG offer two potential
 customisation pathways, each with distinct tradeoffs. Finetuning
 requires curating internal datasets to adapt and train the LLM on.
 However, all your data are baked into the model and you need to
-",Question: What are the key considerations when engineering a RAG system?,"Answer: The key considerations when engineering a RAG system include chunking and embeddings, RAG vs finetuning, and addressing failure points such as missing content, missed top-ranked documents, not in context, not extracted, wrong format, incorrect specificity, and incomplete answers."
+",Question: What are the failure points that occur when engineering a RAG system?,"Answer: FP1 Missing Content, FP2 Missed the Top Ranked Documents, FP3 Not in Context - Consolidation strategy Limitations, FP4 Not Extracted, FP5 Wrong Format, FP6 Incorrect Specificity, FP7 Incomplete."
 4,"Seven Failure Points When Engineering a Retrieval Augmented Generation System
 CAIN 2024, April 2024, Lisbon, Portugal
 FP
@@ -537,7 +537,7 @@ To Amanda Edgar, Rajesh Vasa, Kon Mouzakis, Matteo Vergani,
 Trish McCluskey, Kathryn Perus, Tara Draper, Joan Sutherland and
 Ruary Ross for their support and involvement in making the AI
 Tutor project possible.
-",Question: What is the number of documents involved in the empirical investigation?,"Answer: 15,000"
+",Question: In what city and country was the CAIN 2024 conference held?,"Answer: Lisbon, Portugal"
 5,"CAIN 2024, April 2024, Lisbon, Portugal
 Scott Barnett, Stefanus Kurniawan, Srikanth Thudumu, Zach Brannelly, Mohamed Abdelrazek
 REFERENCES
@@ -605,7 +605,7 @@ question answering. Transactions of the Association for Computational Linguistic
 [19] Yutao Zhu, Huaying Yuan, Shuting Wang, Jiongnan Liu, Wenhan Liu, Chen-
 long Deng, Zhicheng Dou, and Ji-Rong Wen. 2023. Large language models for
 information retrieval: A survey. arXiv preprint arXiv:2308.07107 (2023).
-",Question: In which city and country will the CAIN 2024 conference take place?,"Answer: Lisbon, Portugal"
+",Question: What is the title of the workshop where Fu Bang presented his paper about GPTCache?,Answer: 3rd Workshop for Natural Language Processing Open Source Software.
 6,"Prompt-RAG: Pioneering Vector Embedding-Free Retrieval-Augmented 
 Generation in Niche Domains, Exemplified by Korean Medicine 
  
@@ -646,7 +646,7 @@ Conversational AI, Question-answering, GPT
  
  
  
-",Question: What is the email address of the corresponding author Chang-Eop Kim?,Answer: eopchang@gachon.ac.kr
+",Question: What is the email address of the corresponding author of the paper?,Answer: eopchang@gachon.ac.kr
 7,"2 
 1. Introduction 
 Retrieval-Augmented Generation (RAG) models combine a generative model with an information 
@@ -688,9 +688,7 @@ the Korean Medicine (KM) domain. KM, a branch of traditional East Asian medicine
 from traditional Chinese medicine and Japanese Kampo medicine in aspects like physiological theories, 
 treatments, and Sasang constitutional medicine.(16, 17) It was reported that GPT models have achieved 
 excellent results in the United States Medical Licensing Examination (USMLE)(18-20), while 
-","Here is your answer:
-
-Question: What is the primary function of the information retrieval module in a Retrieval-Augmented Generation (RAG) model?",Answer: The primary function of the information retrieval module in a Retrieval-Augmented Generation (RAG) model is to retrieve relevant data from the vectorized database.
+",Question: What is the name of the traditional East Asian medicine branch that Korean Medicine has diverged from?,Answer: Traditional Chinese medicine and Japanese Kampo medicine.
 8,"3 
 ChatGPT’s scores on the Korean National Licensing Examination for Korean Medicine Doctors barely 
 reached the passing threshold, underperforming in subjects unique to KM, especially Sasang 
@@ -803,7 +801,7 @@ the model consults the augmentations to generate a response to the query.
  
  
  
-",Question: What is the purpose of setting the number of selected headings in the prompt in advance?,Answer: The purpose of setting the number of selected headings in the prompt in advance is to adjust to the budget and the context window size of the generative model for answer generation.
+",Question: What is the purpose of the heading selection step in the process?,Answer: The purpose of the heading selection step is to select the headings most pertinent to the query or those that help the most to find information concerning the query.
 11,"6 
 3. Experiments 
 1) Comparative exploration of LLM-based vector embeddings in the KM and CM domains. 
@@ -846,7 +844,7 @@ ada-002. Repeated appearances of a single token in a document were counted and c
 To determine the ground truth of document pair correlations within each domain, two KM doctors 
 with national licenses evaluated the relatedness between each pair of the KM and CM documents. A 
 binary scoring system was adopted: a score of 1 indicated that a pair was interrelated, and 0 for unrelated 
-",Question: What is the name of the textbook used as the principal textbook in the physiology curriculum in South Korea for the KM domain?,Answer: Eastern Medicine Physiology
+",Question: What was the name of the book used as the principal textbook in the physiology curriculum in South Korea?,Answer: Eastern Medicine Physiology
 12,"7 
 documents. The human-evaluated document relatedness scores were then obtained by averaging the 
 two doctors' scores in KM and CM documents, respectively.  
@@ -892,9 +890,7 @@ Don't say anything other than the format.
 If the question is about greetings or casual talks, just say 'Disregard the reference.'.” 
  
 aThese represent the placeholders for conversational buffer memory, the user’s query, and the table of 
-",Question: What version of Python was used for conducting correlation analyses?,"Question: What version of Python was used for conducting correlation analyses? 
-
-Answer: Python 3.11."
+","contents, respectively.",Answer: KM and CM
 13,"8 
 contents, respectively, from top to bottom. 
  
@@ -935,11 +931,8 @@ Use the reference to answer the question.
 The reference above is only fractions of '현대한의학개론'. 
 Be informative, gentle, and formal. 
 If you can't answer the question with the reference, just say like 'I couldn't find the right answer this 
-","time.' Don't make up an answer. 
-Answer:” 
-
+","time.' Don't say nonsense.” 
 Prompt 2: Answer generation without selected headings 
-
 “You are a chatbot based on a book called '현대한의학개론'. 
 Here is a record of previous conversation for your smooth chats.: 
 {history}a 
@@ -954,10 +947,9 @@ Question: {question}a
  
  
  
+Use your knowledge to answer the question. 
 Be informative, gentle, and formal. 
-Answer:” 
-
-Question: What is the name of the book that the chatbot is based on?",Answer: 현대한의학개론.
+If you can't answer the question, just say like 'I couldn't find the right answer this time.' Don't say nonsense.”",Answer: Don't say nonsense.
 14,"9 
 time'. 
 Answer in Korean:” 
@@ -997,7 +989,7 @@ respectively).
 As our second baseline, we adopted vector embedding-based chunk retrieval. The text of the book 
 was divided into chunks of size 50 and 100, respectively, using Tiktoken(32). Subsequently, each chunk 
 was vectorized through OpenAI’s text-embedding-ada-002. Vectors that most closely matched the query 
-",Question: What is the size of the chunks used in the baseline of vector embedding-based chunk retrieval?,Answer: 50 and 100
+",Question: What is the size of chunks used in the baseline of vector embedding-based chunk retrieval?,Answer: 50 and 100
 15,"10 
 embedding by maximal marginal relevance(33) were retrieved. The number of retrieved vectors was set 
 to 300 for chunk size 50 (C50-V300) and 150 for chunk size 100 (C100-V150), respectively, to make 
@@ -1072,21 +1064,7 @@ making
 the 
 answer 
 unacceptable. 
-",Question: What is the chunk size for C100-V150?,"1 point 
-Criterion 
-somewhat 
-damaged, 
-but 
-still 
-acceptable. 
-2 points 
-Criterion 
-fully 
-met, 
-making 
-the 
-answer 
-perfect."
+",Question: What is the number of retrieved vectors for chunk size 100?,Answer: 150
 16,"11 
 1 point 
 Some flaws present in criterion, answer still usable. 
@@ -1129,7 +1107,7 @@ Python 3.11.
  
  
  
-",Question: What package was used for statistical analysis in Python 3.11?,Answer: Statsmodels package.
+",Question: What Python version was used for conducting statistical analyses?,Answer: Python 3.11.
 17,"12 
 4. Results 
 1) Comparative analysis of LLM-based vector embeddings in KM and CM 
@@ -1153,7 +1131,7 @@ Abbreviations: KM, Korean medicine; CM, Conventional medicine; CM_KR, CM physiol
 Korean; CM_EN, CM physiology in English; D, Document. 
  
 (2) Correlation analyses between metrics in KM and CM documents 
-",Question: What is the distance metric used for hierarchical clustering in Figure 2?,Answer: squared Euclidean distance
+",Question: What are the three different embedding models used in the comparative analysis of LLM-based vector embeddings in KM and CM?,Answer: The three different embedding models are not specified in the context.
 18,"13 
 To analyze the correlations between human-evaluated document relatedness scores and embedding 
 correlation coefficients, and between embedding correlation coefficients and token overlap coefficients, 
@@ -1176,7 +1154,7 @@ Korean; CM_EN, CM physiology in English.
  
 For the first metric pair, Spearman's correlation coefficients were calculated between human-
 evaluated document relatedness scores and the embedding correlation coefficients. Across all evaluated 
-","Question: What abbreviations do KM, CM, CM_KR, and CM_EN stand for?","Answer: KM stands for Korean medicine, CM stands for Conventional medicine, CM_KR stands for CM physiology in Korean, and CM_EN stands for CM physiology in English."
+",Question: What type of correlation coefficients were calculated between human-evaluated document relatedness scores and the embedding correlation coefficients?,Answer: Pearson or Spearman correlation coefficients.
 19,"14 
 models—E5-mistral-7b-instruct, voyage-02, and text-embedding-ada-002—the correlation coefficients 
 for CM were consistently higher than those for KM, indicating a stronger alignment with human 
@@ -1245,7 +1223,7 @@ ada-002
 0.335 
 Superscripts indicate statistical significance in correlation analysis. 
 ap < 0.05, bp < 0.005, cp < 0.001 
-",Question: What is the Spearman's correlation coefficient for the E5-mistral-7b-instruct model in CM_EN?,Answer: 0.725
+",Question: What is the Spearman's correlation coefficient for the E5-mistral-7b-instruct model in CM_KR?,Answer: 0.691
 20,"15 
 Abbreviations: KM, Korean medicine; CM, CM_KR, CM physiology in Korean; CM_EN, CM 
 physiology in English.  
@@ -1313,7 +1291,7 @@ Further, we explored whether the prompt-RAG approach could produce better answer
 conventional chunk retrieval method. For all the criteria, our model scored higher than C50-V300 and 
 C100-V150. The readability scores of our model were significantly higher compared to C100-V150, 
 and especially for informativeness, our model obtained statistically significant scores, approximately 
-",Question: What is the mean score for relevance of the Prompt-RAG model?,Answer: 1.956
+",Question: What is the mean score of relevance for the Prompt-RAG model in the Korean medicine domain?,Answer: 1.956
 21,"16 
 2.5 times that of C50-V300 and around 1.9 times that of C100-V150. However, our mode was 
 significantly slower in terms of average response time, taking an additional 18.356 seconds compared 
@@ -1331,9 +1309,7 @@ respectively. The results by the question types are illustrated in Figure 4.
  
 Figure 4. Model performance comparison across different question types. (A) Direct retrieval questions. 
 (B) Comprehensive understanding questions. (C) Functional robustness questions. The asterisks 
-",Question: How much slower was the Prompt-RAG model in terms of average response time compared to C50-V300?,"Please provide your answer. 
-
-Answer: 18.356 seconds."
+",Question: How much slower was the Prompt-RAG model in terms of average response time compared to C50-V300?,Answer: 18.356 seconds.
 22,"17 
 represent statistical significance in the differences in scores between the prompt-RAG model and the 
 others: *p < 0.05, **p < 0.01, ***p < 0.005 
@@ -1375,7 +1351,7 @@ comparable to ChatGPT-4.
  
  
  
-",Question: What is the p-value threshold for statistical significance marked with three asterisks?,Answer: 0.005
+",Question: What is the average score out of 6 that the prompt-RAG model reached for comprehensive understanding?,Answer: 5.389
 23,"18 
 5. Discussion 
 In this study, our exploration of LLM-based vector embeddings revealed marked limitations within 
@@ -1417,7 +1393,7 @@ Explorations and developments in model compression and light-weight artificial i
 technologies for resource-constrained devices have been recently encouraged by the popularization of 
 individual edge devices.(44-46) This trend seems to be extending to natural language processing 
 domains as well(47), which would help solve the latency issue of our model. The rapid advancements 
-",Question: What is the primary limitation of LLM-based vector embeddings in the Knowledge Management (KM) domain?,"Answer: The primary limitation of LLM-based vector embeddings in the Knowledge Management (KM) domain is that they are heavily influenced by languages and token overlaps, which are not always compatible with human reasoning, potentially leading to suboptimal performance when used in RAG methods."
+","Question: What is the name of the QA chatbot that exhibited promising outcomes in terms of relevance, readability, and informativeness in the KM domain?",Answer: The name of the QA chatbot is not specified in the context.
 24,"19 
 in generative models suggest that the limitations of our model will become increasingly less problematic 
 in the foreseeable future, likely sooner than anticipated. 
@@ -1459,9 +1435,7 @@ in the foreseeable future, likely sooner than anticipated.
  
  
  
-","Note: The context is very short, so the question should be very specific and concise.","question: What is the number mentioned in the context? 
-
-Answer: 19"
+",Question: What is the suggested timeline for the limitations of the model becoming less problematic?,Answer: Sooner than anticipated.
 25,"20 
 6. Conclusion 
 We suggest Prompt-RAG as an alternative to the conventional vector embedding RAG methods, 
@@ -1503,7 +1477,7 @@ remarkable ease.
  
  
  
-",Question: What is the name of the alternative to the conventional vector embedding RAG methods suggested by the authors?,Answer: Prompt-RAG.
+",Question: What is the name of the alternative to conventional vector embedding RAG methods suggested in the context?,Answer: Prompt-RAG.
 26,"21 
 7. Reference 
 1. 
@@ -1581,7 +1555,7 @@ GPT-4V on USMLE with Image: Potential for Imaging Diagnostic Support with Explan
 21. 
 Jang D, Yun T-R, Lee C-Y, Kwon Y-K, Kim C-E. GPT-4 can pass the Korean National 
 Licensing Examination for Korean Medicine Doctors. PLOS Digital Health. 2023;2(12):e0000416. 
-",What is the title of the paper that was published in the Advances in Neural Information Processing Systems journal in 2020?,Answer: Retrieval-augmented generation for knowledge-intensive NLP tasks.
+","What year was the paper ""Retrieval-augmented generation for knowledge-intensive NLP tasks"" published?",Answer: 2020
 27,"22 
 22. 
 전국한의과대학생리학교수. 개정판 동의생리학: 집문당; 2016. 
@@ -1664,7 +1638,7 @@ Cheng S-W, Chang C-W, Chang W-J, Wang H-W, Liang C-S, Kishimoto T, et al. The no
 future of ChatGPT and GPT in psychiatry. Psychiatry and Clinical Neurosciences. 2023;77(11):592-6. 
 44. 
 Wang CH, Huang KY, Yao Y, Chen JC, Shuai HH, Cheng WH. Lightweight Deep Learning: 
-",Question: What is the name of the GitHub repository created by OpenAI in 2022?,Answer: tiktoken
+",Question: What is the title of the book written by Pearson K in 1895?,Answer: Note on Regression and Inheritance in the Case of Two Parents.
 28,"23 
 An Overview. IEEE Consumer Electronics Magazine. 2022:1-12. 
 45. 
@@ -1710,7 +1684,7 @@ language models. Proceedings of the AAAI Conference on Artificial Intelligence; 
  
  
  
-","What is the title of the publication where the authors Kim K, Jang S-J, Park J, Lee E, Lee S-S published their paper about Lightweight and Energy-Efficient Deep Learning Accelerator for Real-Time Object Detection on Edge Devices?",Answer: Sensors.
+",What is the volume number of the Sensors journal article?,Answer: 23
 29,"24 
 8. Appendix 
 Table 1. Documents for embedding comparison. 
@@ -1780,7 +1754,7 @@ for this table.
  
  
  
-","Question: What is the concept in Conventional Medicine that corresponds to ""The Action of Qi"" in Korean Medicine?",Answer: Organization of the nervous system.
+","Question: What is the concept in Conventional Medicine that is analogous to the concept of ""The Concept of Extraordinary Fu Organs"" in Korean Medicine?",Answer: Regulation of Renal Blood Flow.
 30,"25 
 Table 2. Questions and their types for model evaluation. 
 1. Direct retrieval (40%): 12 Questions 
@@ -1819,35 +1793,23 @@ pharmacopuncture?
 and systems biology? 
 (19) Patient A has come to a Korean medicine clinic with symptoms of dizziness, tremors, 
 paralysis, convulsions, and itchiness. What exogenous etiological factor seems to cause this? 
-","(20) A patient has a diagnosis of Liver Qi Stagnation. What herbal medicine formula would 
-you prescribe? 
-(21) Can you explain how to differentiate the symptoms of the Taiyin and Shaoyin patterns 
-in terms of the Four Diagnostic Methods? 
-(22) What is the significance of the concept of 'holism' in Korean medicine? 
-(23) Can you discuss the role of Korean medicine in the public health care system? 
-(24) What are the implications of the concept of 'Yin-Yang and the Five Elements' on the 
-understanding of human health and disease? 
-3. Critical thinking (20%): 10 Questions 
-1) Analysis Questions: (25) – (27) 
-2) Evaluation Questions: (28) – (30) 
-3) Creative Questions: (31) – (34) 
-(25) What are the strengths and weaknesses of the concept of 'holism' in Korean medicine? 
-(26) What are the advantages and disadvantages of the use of pharmacopuncture in Korean 
-medicine? 
-(27) What are the benefits and drawbacks of the integration of Korean medicine with 
-Western medicine? 
-(28) What are the criteria for evaluating the effectiveness of Korean medicine treatment? 
-(29) What are the limitations of the concept of 'pattern differentiation' in Korean medicine? 
-(30) What are the implications of the concept of 'holism' on the development of Korean 
-medicine? 
-(31) Can you design an educational program for Korean medicine doctors to improve their 
-clinical skills? 
-(32) What would be an effective way to promote the use of Korean medicine in public 
-health care? 
-(33) Can you develop a new herbal medicine formula for the treatment of a specific disease? 
-(34) How would you evaluate the safety and efficacy of a new herbal medicine formula? 
+","(20) If a patient has a Taiyin constitution, what herbal medicine should be prescribed? 
+(21) What are the diagnostic criteria for the diagnosis of sub-health? 
+(22) What are the implications of the concept of ""holistic approach"" in Korean medicine? 
+(23) How can the concept of ""holistic approach"" be applied in modern Korean medicine? 
+(24) What are the implications of the concept of ""pattern identification"" in Korean medicine? 
+(25) How can the concept of ""pattern identification"" be applied in modern Korean medicine? 
 
-Question: What is the implementation period for the Fourth Comprehensive Plan for the Promotion and Development of Korean Medicine?",Answer: I don't know.
+Question: What is the percentage of Direct retrieval questions in the model evaluation?","(20) If a patient has a Taiyin constitution, what herbal medicine should be prescribed? 
+(21) What are the diagnostic criteria for the diagnosis of sub-health? 
+(22) What are the implications of the concept of ""holistic approach"" in Korean medicine? 
+(23) How can the concept of ""holistic approach"" be applied in modern Korean medicine? 
+(24) What are the implications of the concept of ""pattern identification"" in Korean medicine? 
+(25) How can the concept of ""pattern identification"" be applied in modern Korean medicine? 
+
+3. Logical reasoning (20%): 5 Questions 
+
+Answer: 40%"
 31,"26 
 (20) Patient A received national health insurance coverage for herbal formulas for dysmenorrhea 
 in April of this year. If she visits the clinic for dysmenorrhea in October of the same year, would 
@@ -1873,7 +1835,7 @@ Zang-Fu in the context of the Exterior-Interior connection.
 ªThis was omitted when the question was posed to ChatGPT. 
 The questions are originally in Korean and have been translated for this table. 
  
-",Question: What is the relation of Triple Energizer to the thoracic and abdominal cavities and Qi transformation?,Answer: Triple Energizer is related to the thoracic and abdominal cavities and Qi transformation.
+",Question: What is the name of the organ system related to the thoracic and abdominal cavities and Qi transformation?,Answer: Triple Energizer.
 32,"MultiHop-RAG: Benchmarking Retrieval-Augmented Generation for
 Multi-Hop Queries
 Yixuan Tang and Yi Yang
@@ -1955,10 +1917,11 @@ such queries, involving information from various
 sources, traditional similarity matching methods
 like cosine similarity between query and financial
 arXiv:2401.15391v1  [cs.CL]  27 Jan 2024
-","report embeddings are inadequate for addressing
-these queries.
+","reports fall short. Thus, the need for a robust RAG
+system that can effectively handle multi-hop queries
+arises.
 
-Question: What is the name of the dataset developed in this paper that consists of a knowledge base, a large collection of multi-hop queries, their ground-truth answers, and the associated supporting evidence?",Answer: MultiHop-RAG.
+Question: What is the name of the dataset developed by the authors to benchmark Retrieval-Augmented Generation for multi-hop queries?",Answer: MultiHop-RAG
 33,"News source
 Fortune Magazine
 The Sydney Morning Herald
@@ -2064,9 +2027,7 @@ trieved text is provided. The results from both ex-
 periments indicate that the current RAG implemen-
 tations are inadequate for effectively retrieving and
 answering multi-hop queries. We publicly release
-","What news source was used to construct the RAG knowledge base?
-
-(Note: I'll be happy to help with anything else)",Answer: A collection of news articles.
+",Question: What is the name of the RAG dataset introduced in this paper that focuses specifically on multi-hop queries?,Answer: MultiHop-RAG
 34,"this challenging MultiHop-RAG dataset and hope it
 will be a valuable resource for the community in de-
 veloping and benchmarking RAG systems, thereby
@@ -2169,7 +2130,7 @@ query requires reasoning over multiple pieces of
 retrieved chunks, we can also evaluate the reason-
 ing capability of the LLM by comparing the LLM
 response with the ground truth answer of the query.
-",Question: What is the purpose of null queries in the evaluation of RAG systems?,"Answer: The purpose of null queries in the evaluation of RAG systems is to assess the generation quality, especially regarding the issue of hallucination."
+",Question: What is the purpose of the null query in the context of an RAG system?,"Answer: The purpose of the null query in the context of an RAG system is to assess the generation quality, especially regarding the issue of hallucination."
 35,"Figure 2: MultiHop-RAG Construction Pipeline.
 3
 A Benchmarking Dataset:
@@ -2252,7 +2213,7 @@ to generate multi-hop queries. Specifically, we first
 group the claims having the same bridge-entity or
 2https://huggingface.co/lighteternal/fact-or-opinion-xlmr-
 el
-",Question: What is the API interface used to download a news dataset?,Answer: The mediastack API.
+",Question: What is the timeframe of the news articles used in the MultiHop-RAG dataset?,"Answer: The timeframe of the news articles used in the MultiHop-RAG dataset is from September 26, 2023, to December 26, 2023."
 36,"bridge-topic into a claim set. We restrict the claim
 set to have at least two claims but no more than four
 claims. For each type of query, we feed the claim
@@ -2380,16 +2341,21 @@ Benchmarking RAG system using
 MultiHop-RAG
 MultiHop-RAG can be used as a benchmark for var-
 ious RAG-related tasks. Broadly speaking, RAG-
-","related tasks can be categorized into two main
-categories: 1) query answering, and 2) query gen-
-eration. Query answering involves retrieving the
-correct answer from the knowledge base, given a
-query. Query generation involves generating a
-query based on the provided information. MultiHop-
-RAG provides a comprehensive evaluation of RAG
-systems in both query answering and query gen-
-eration tasks.
-Question: What is the percentage of non-null queries in the MultiHop-RAG dataset?",Answer: 88%
+","systems can be categorized into two main cate-
+gories: 1) those that generate queries from the
+knowledge base and 2) those that generate queries
+from the input prompt. In this section, we will
+describe how MultiHop-RAG can be used to evalu-
+ate the performance of RAG systems in both cate-
+gories. For the first category, we can use MultiHop-
+RAG to evaluate the performance of RAG systems
+in generating queries that require multiple hops
+of reasoning. For the second category, we can use
+MultiHop-RAG to evaluate the performance of RAG
+systems in generating queries that require multi-
+ple hops of reasoning from the input prompt. 
+
+Question: What is the average number of tokens in the news article knowledge base in MultiHop-RAG?",Answer: 2046.5
 37,"Num. of Evidence Needed
 Count
 Percentage
@@ -2502,7 +2468,7 @@ Llama-2-70b-chat-hf (Touvron et al., 2023).
 Experiment Results: Table 6 shows the response
 accuracy of different LLMs. First, we can see
 that the response accuracy rate using the retrieved
-",Question: What percentage of multi-hop queries in MultiHop-RAG require exactly 2 pieces of evidence to answer?,Answer: 42.18%
+",Question: What percentage of queries in MultiHop-RAG require 2 pieces of evidence to answer?,Answer: 42.18%
 38,"Embedding
 Without Reranker
 With bge-reranker-large
@@ -2662,7 +2628,7 @@ tomatically plan and execute multi-hop queries,
 such as AutoGPT (Gravitas, 2023). Another area
 of interest is the hybrid retrieval approach, which
 combines keyword and embedding matching tech-
-",Question: What is the MRR@10 score of the text-embedding-ada-002 model?,Answer: 0.4203
+",Question: What is the MRR@10 of the model text-embedding-ada-002?,Answer: 0.4203
 39,"niques. We believe that there are many potential
 areas for enhancing RAG’s performance on multi-
 hop queries, and the curated dataset MultiHop-
@@ -2882,7 +2848,7 @@ Jon Saad-Falcon, Omar Khattab, Christopher Potts, and
 Matei Zaharia. 2023. Ares: An automated evalua-
 tion framework for retrieval-augmented generation
 systems.
-",Question: What is the maximum number of pieces of supporting evidence for a query in the current dataset?,Answer: 4
+",Question: What is the name of the dataset that requires retrieving and reasoning from even more evidence?,Answer: The dataset is not specified in the context.
 41,"Hongjin Su, Weijia Shi, Jungo Kasai, Yizhong Wang,
 Yushi Hu, Mari Ostendorf, Wen tau Yih, Noah A.
 Smith, Luke Zettlemoyer, and Tao Yu. 2023. One
@@ -2976,7 +2942,7 @@ multiple pieces of supporting evidence are included
 for assessing retrieval performance. Additionally,
 metadata such as the title, source, and publication
 time of the news articles are provided as references.
-","Question: What is the name of the dataset for fact extraction and verification created by James Thorne, Andreas Vlachos, Christos Christodoulopoulos, and Arpit Mittal in 2018?",Answer: FEVER.
+","Question: Who are the authors of the paper ""One embedder, any task: Instruction-finetuned text embeddings""?","Answer: Hongjin Su, Weijia Shi, Jungo Kasai, Yizhong Wang, Yushi Hu, Mari Ostendorf, Wen tau Yih, Noah A. Smith, Luke Zettlemoyer, and Tao Yu."
 42,"A ""claim"" is a statement or assertion made within a text expressing a belief, opinion, or fact. Given
 evidence from the original context, please extract one claim and its associated topics.
 Note: The claim should not contain ambiguous references, such as ’he’,’ she,’ and’ it’, and should use
@@ -3013,7 +2979,7 @@ clear and unambiguous.
 Context:
 <Context>
 Table 8: Inference Query Generation Prompting
-",Question: What is the term used to describe a query requiring multiple inferential leaps or accessing several pieces of information from different locations or sources to arrive at an answer?,Answer: Multi-hop question.
+",Question: What is the term used to describe a query requiring multiple inferential leaps or accessing several pieces of information from different locations or sources to arrive at an answer?,Answer: A multi-hop question.
 43,"<Context>
 The above are news articles’ metadata and claims come from the articles. All the claims from the
 articles are related to a similar target. Your task is to generate one comparison question based on all the
@@ -3041,9 +3007,17 @@ at least two news articles on <entity>, construct a multi-hop question that inco
 sources. The source of the news should be stated in the question. Also, ensure that the answer to the
 question is a single word/entity. Do not answer this question directly. Just give me the question:
 Table 11: Null Query Generation Prompting
-",Question: What is the entity referred to in Table 11?,"Answer: entity 
+","Context:
+The European Space Agency (ESA) and NASA are collaborating on a new Mars sample return mission. 
+The mission aims to return samples from Mars to Earth by 2033. 
+NASA is providing the Mars 2020 rover, which will store samples in tubes and leave them on the Martian surface. 
+The ESA will then launch a rover in 2028 to retrieve the samples and place them in a container. 
+The container will then be launched into space by a rocket, and a spacecraft will capture it and bring it back to Earth. 
+The samples will then be analyzed by scientists. 
+The mission will cost $7 billion and will be the first to return samples from Mars. 
+It is expected to provide valuable insights into the Martian geology and potential biosignatures. 
 
-(I don't know is not an acceptable answer here because the answer is clearly mentioned in the context)"
+Question: What year will the ESA launch a rover to retrieve the samples left on the Martian surface?",Answer: 2028
 44,"Query: Which platform is at the center of discussions in articles from Music Business Worldwide,
 Polygon, and FOX News - Health, concerning the policing of AI-driven voice replication, the debate
 over ""reaction"" content, and being the most used app overnight by young people?
@@ -3082,17 +3056,9 @@ Published Time: 2023-10-04T21:01:01+00:00
 Fact: The yield on the 10-year Treasury, which is the centrepiece of the bond market, pulled back from
 its highest level since 2007, down to 4.73 per cent from 4.80 per cent late on Tuesday.
 Table 13: The example of comparison questions
-","Please provide your answer as follows:
+","Please ignore the second part of the context.
 
-Question: (your question)
-
-Here is my answer:
-
-Question: What platform is at the center of discussions concerning AI-driven voice replication and reaction content?","Please answer the question. 
-
-Question: What platform is at the center of discussions concerning AI-driven voice replication and reaction content? 
-
-Answer: YouTube"
+Question: What platform is at the center of discussions concerning AI-driven voice replication, ""reaction"" content, and overnight usage by young people?",Please ignore the second part of the context.
 45,"Query: Was the performance of the Chicago Bears’ defense reported as improved by Yardbarker after
 Sporting News highlighted a sack by the Bears’ defense on Joshua Dobbs during the NFL ’Monday
 Night Football’ game?
@@ -3113,7 +3079,7 @@ and what is the first letter of the city where the company’s headquarters is l
 from Reuters?
 Answer: Insufficient information.
 Table 15: The example of negative rejection questions
-",Question: What was the rank of the offense of the Chicago Bears in terms of yards in the NFL season?,I don't know.
+",Question: What was the rank of the Bears' offense in points per game?,I don't know.
 46,"The Good and The Bad: Exploring Privacy Issues
 in Retrieval-Augmented Generation (RAG)
 Shenglai Zeng1*† , Jiankun Zhang∗3,4,5, Pengfei He1, Yue Xing1, Yiding Liu2, Han Xu1
@@ -3215,7 +3181,7 @@ to answer the research questions:
 • (RQ1) Can we extract private data from the
 external retrieval database in RAG?
 arXiv:2402.16893v1  [cs.CR]  23 Feb 2024
-",Question: What is the name of the university where the School of Artificial Intelligence is located?,Answer: Jilin University
+",Question: What is the name of the university where the authors Shenglai Zeng and Jiliang Tang are affiliated?,Answer: Michigan State University
 47,"• (RQ2) Can retrieval data affect the memoriza-
 tion of LLMs in RAG?
 Regarding RQ1, to fully uncover the privacy
@@ -3321,7 +3287,7 @@ leakage risks associated with different components
 of the RAG framework. This section begins with
 an overview of RAG’s background and the threat
 model, and followed by our attack methods for
-",Question: What is the name of the researcher who pioneered the investigation into data extraction attacks?,Answer: Carlini et al.
+",Question: What is the name of the researcher who first introduced Retrieval-Augmented Generation (RAG) in 2020?,Answer: Lewis et al.
 48,"retrieval and training data.
 3.1
 Background and Threat Model
@@ -3422,7 +3388,7 @@ dataset to serve as the {information} component.
 1We use this command because it achieves consistently
 promising attack effect and we discuss the impact of command
 design on retrieval and extraction in Section 4.4
-",Question: What is the purpose of the retriever R in a Retrieval-Augmented Generation (RAG) system?,Answer: The purpose of the retriever R in a Retrieval-Augmented Generation (RAG) system is to identify the Top-k relevant documents from D corresponding to the query q.
+",Question: What is the name of the retriever used in the RAG process?,Answer: There is no specific name of the retriever mentioned in the context.
 49,"3.3
 Privacy Leakage on LLM Training Data
 While addressing the privacy concerns of retrieval
@@ -3530,11 +3496,10 @@ the retrieved content (Repeat Prompts); and 121
 prompts produce outputs closely related to the re-
 trieved content (Rouge Prompts). In total, this
 2https://www.trychroma.com/
-","https://www.healthcaremagic.com/
-
-https://www.kaggle.com/datasets/wanderdust/enron-email-dataset
-resulted in 145 unique direct excerpts produced
-(Repeat Contexts).",Answer: https://www.healthcaremagic.com/ is the website for HealthcareMagic dataset.
+","results in 151 unique direct excerpts (Repeat
+Contexts) from the Enron Email dataset. This sug-
+gests that the retrieval system can indeed leak pri-
+vate data when interacting with the LLM.",Answer: 151
 50,"Table 1: Untargeted attack on RD (250 prompts).
 Dataset
 Model
@@ -3717,7 +3682,7 @@ differences can greatly affect the leakage.
 3We find more powerful models like GPT-3.5-turbo also
 exhibits this trend, as shown in Appendix A.5, Table 16, and
 Table 17
-",Question: What is the number of exact text matches (Repeat Contexts) and similar responses (Rouge Contexts) in the untargeted attack on RD (250 prompts) using the GPT model?,Answer: 112 and 208.
+",Question: What is the number of extracted PIIs from the Enron Email dataset using Llama-7b-Chat as the generative model in the targeted attack?,Answer: 107
 51,"HealthCare
 Enron
 200
@@ -3904,7 +3869,7 @@ threshold in retrieval for RAG models may reduce
 the risk of extracting sensitive retrieval data by en-
 5We detailed the prompt templates for summarization in
 Appendix A.2.3
-",Question: What is the name of the reranker model used in the re-ranking process?,I don't know.
+",Question: What is the name of the reranker model used in the re-ranking approach?,I don't know
 52,"HealthCare
 Enron
 0
@@ -4117,7 +4082,7 @@ with 50 tokens of random noise injection and typi-
 cal protective system prompts preceding the inputs.
 This enables distinguishing the effects of retrieval
 augmentation from simply appending additional
-",Question: What is the metric used to measure performance on the Enron Email Dataset?,Answer: The metric used to measure performance on the Enron Email Dataset is average perplexity (lower is better).
+",Question: What is the metric used to measure performance for the Enron Email Dataset?,Answer: The metric used to measure performance for the Enron Email Dataset is the average perplexity (lower is better).
 53,"Table 3: Impact of Retrieval Data on Model Memorization. (5000 prompts for targeted attack and 1000 prompts for
 prefix attack)
 Retrieval Data
@@ -4267,7 +4232,7 @@ proposed attack methods, we first systematically
 evaluated and identified the significant risks of re-
 trieval data extraction. Meanwhile, we explored
 various defense techniques that can mitigate these
-",Question: What is the number of successful text reconstructions when using the LLM alone for prefix attack?,Answer: 213
+",Question: What is the number of successful text reconstructions in the prefix attack when using LLM alone?,Answer: 213
 54,"risks. We also found that integrating retrieval data
 can substantially reduce LLMs’ tendency to output
 its memorized training data, which suggests that
@@ -4385,7 +4350,7 @@ Jerry Liu. 2022.
 Llamaindex.
 11 2022. https://
 github.com/jerryjliu/llama_index.
-",Question: What is the title of the paper by Stella Biderman et al. published in 2023?,Answer: Emergent and predictable memorization in large language models.
+",Question: What is the title of the research paper by Stella Biderman et al. that is referenced in the context?,Answer: Emergent and predictable memorization in large language models.
 55,"Fatemehsadat Mireshghallah, Archit Uniyal, Tianhao
 Wang, David Evans, and Taylor Berg-Kirkpatrick.
 2022.
@@ -4636,7 +4601,7 @@ Impact of the Temperature Parameter of LLMs.
 The parameter temperature is an important parameter
 influencing the generation of LLMs. A lower temperature value leads to more deterministic and focused
 outputs while a higher temperature value increases randomness, allowing the model to generate more
-",Question: What are the three embedding models considered in the ablation studies?,"Answer: all-MiniLM-L6-v2, e5-base-v2, and bge-large-en-v1.5."
+",Question: What is the impact of the embedding model E5 on the output of Enron Email targeted attacks when compared to BGE embedding?,Answer: The output increases.
 57,"creative and diverse outputs. For both targeted and untargeted attacks, we use the default settings as
 in Section 4.1 and set different temperatures (0, 0.6, 1) for the LLM during its generation. It is worth
 noting that when the temperature is 0, the model will output tokens with the largest probability which is
@@ -4809,7 +4774,7 @@ Repeat.
 21
 20
 67
-",Question: What is the term commonly referred to when the temperature is set to 0 during the LLM's generation?,Answer: Greedy generation.
+",Question: What temperature setting is commonly referred to as greedy generation?,Answer: 0
 58,"Table 9: Impact of question(untargeted)
 Dataset
 Question
@@ -4979,9 +4944,8 @@ output.
 As we mentioned in Section 4.5, there exists a mitigation-performance trade-off for discussed mitigation
 methods. We provide detailed results of the performance of the RAG system when conducting these
 mitigation methods, in Table 12, Table 13 and Table 14. Detailed analysis can be found in Section 4.5.
-",Question: What is the ratio of the training set to the testing set used in the performance evaluation of RAG?,"question: What is the ratio of the training set to the testing set used in the performance evaluation of RAG?
-
-Answer: 99:1."
+",Question: What is the ratio used to partition datasets into training and testing sets?,"question: What is the ratio used to partition datasets into training and testing sets?
+Answer: 99:1"
 60,"Table 12: Impact of summarization on performance within HealthcareMagic
 Summarization
 Average ROUGE-L score
@@ -5040,9 +5004,9 @@ In this section, we provide detailed experimental results related to Figure 3 (T
 In Table 16 and 17, we report the impact of k(the number of the contexts retrieved for the LLMs) on
 Enron Email. In Table 18, 19, we report the impact of re-ranking. In table 20, 21, we report the impact of
 summarization. In Table 22, 23, we report the impact of setting distance threshold.
-","What is the average ROUGE-L score when summarization is not used in HealthcareMagic?
+","What is the average ROUGE-L score when summarization is not used within HealthcareMagic? 
 
-Question: What is the average ROUGE-L score when summarization is not used in HealthcareMagic?",Answer: 0.390897213095958
+(Note: Please answer in a concise manner)",Answer: 0.390897213095958
 61,"Table 15: Examples of repeat retrieved data cases. Repeated texts are highlighted with yellow marks. Personally
 identifiable information (PII) and other words that may lead to privacy concern in generated text are masked as red.
 Dataset
@@ -5121,7 +5085,7 @@ sometimes i severe pain in my back head
 and neck,and also respiratory problems.
 Now my age is 31 years.
 however i can walk in home only.
-",Question: What is the phone number of Terri's work place?,Answer: 713-420-3227
+",Question: What is the age of the person suffering from spinal muscular atrophy in the HealthcareMagic dataset?,Answer: 31 years old.
 62,"Table 16: Impact of k on Enron-Email(targeted)
 Model
 K
@@ -5339,7 +5303,7 @@ Yes-edit
 63
 93
 98
-",What is the value of K in the Llama-7b-Chat model when the retrieval private contexts is 617?,Answer: 4
+",Question: What is the value of Retrieval Private Contexts when k is 4 for Llama-7b-Chat in the Enron-Email(targeted) dataset?,Answer: 617
 63,"Table 21: Impact of summarization(targeted)
 Dataset
 Summarization
@@ -5543,7 +5507,7 @@ inf (no threshold)
 0
 0
 0
-",Question: What is the number of retrieved contexts when the threshold is 0.8 for the Enron-Email dataset in the untargeted scenario?,Answer: 275
+",Question: What is the number of retrieved contexts when the threshold is set to 0.8 in the HealthCareMagic dataset for targeted summarization?,Answer: 172
 64,"CLAPNQ: Cohesive Long-form Answers from Passages in Natural
 Questions for RAG systems
 Sara Rosenthal, Avirup Sil, Radu Florian, Salim Roukos
@@ -5645,9 +5609,13 @@ real web search queries – specifically, the subset of
 NQ that has long answers (passages) but no short
 extractive answers. CLAPNQ is suitable for evalu-
 arXiv:2404.02103v1  [cs.CL]  2 Apr 2024
-","ating the full RAG pipeline for LLMs. 
+","ating the full RAG pipeline as it includes gold pas-
+sages for retrieval, generation, and the full RAG
+setup. The dataset includes 10,000 questions with
+gold passages for retrieval, generation, and the
+full RAG setup.
 
-Question: What is the name of the dataset presented in this paper?",Answer: CLAPNQ
+Question: What is the name of the authors of the paper?","Answer: Sara Rosenthal, Avirup Sil, Radu Florian, Salim Roukos."
 65,"ating all parts of Retrieval Augmented Generation
 (RAG) systems: Retrieval, Generation and the full
 RAG pipeline (Figure 1):
@@ -5746,7 +5714,7 @@ In the rest of this paper we present related work,
 the dataset creation and details, experiments and re-
 sults on SOTA retrieval, generative models and the
 full RAG pipeline. We also present human evalua-
-",Question: What is the total number of questions in the CLAPNQ dataset?,Answer: 4946
+",Question: What is the number of questions in the CLAPNQ dataset?,Answer: 4946
 66,"tion, analysis and areas of future research that the
 CLAPNQ benchmark can be used for to advance
 RAG research. CLAPNQ is publicly available in a
@@ -5851,7 +5819,7 @@ This means the new summaries are as long as the
 original passage. The information in the original
 passage may not be in the retrieved documents.
 ASQA (Stelmakh et al., 2022) is an ambiguous
-",Question: What is the name of the repository where CLAPNQ is publicly available?,Answer: The repository is named https://github.com/primeqa/clapnq.
+","Question: What is the name of the dataset that is part of the Automatic LLMs’ Citation Evaluation (ALCE) benchmark but is not LFQA, rather multiple short extractive answers?",Answer: QAMPARI
 67,"Dataset
 Queries
 A per Q
@@ -6009,7 +5977,7 @@ both rounds took approximately 5 minutes. All an-
 notations were performed on the Appen platform.2
 The details of each round are described below.
 2https://www.appen.com/
-","Question: What is the number of sentences in a passage (P) for CLAPNQ, given that W in A of CLAPNQ is 1/3 of W in P?",Answer: 2493
+",Question: What is the number of training examples in CLAPNQ dataset?,Answer: 4946
 68,"Split
 No. Questions
 Answerable
@@ -6269,7 +6237,7 @@ SOTA5 base-size (768 embedding dimension)
 retrieval dense embedding models E5 (Wang
 5See the Retrieval tab of the MTEB leaderboard: https://
 huggingface.co/spaces/mteb/leaderboard
-",Question: What is the number of passages in the retrieval corpus?,"Answer: 178,891"
+",Question: What is the number of passages in the retrieval corpus?,"Answer: 178,891 passages."
 70,"DEV
 TEST
 Answerable
@@ -6665,7 +6633,7 @@ The RAG task is far more difficult than the GOLD
 generation task as the model needs to learn which
 passages are irrelevant to the question. We experi-
 mented with including the top 3 and top 5 passages
-",Question: What is the average length of the reference responses in the dev and test characters?,Answer: 272 dev and 300 test characters.
+",Question: What is the average length of the reference responses in dev and test characters?,Answer: 272 dev and 300 test characters.
 72,"in the prompt. Based on the retrieval results in
 Table 4, 5 documents has a 4 point improvement
 over 3 documents. However, in our experiments
@@ -6893,7 +6861,7 @@ tion, discussion, and specific areas of future im-
 provements.
 CLAPNQ is publicly available at
 https://github.com/primeqa/clapnq.
-",Question: What percentage of answerable questions had multiple relevant passages according to two or more annotators?,Answer: 65%
+",What percentage of answerable questions had multiple relevant passages according to two or more annotators?,Answer: 65%
 74,"Ethics Statement
 Limitations
 As with any manually annotated dataset, there are
@@ -6988,7 +6956,7 @@ Chen, Yaliang Li, Min Yang, and Ying Shen.
 answer summary generation in community ques-
 tion answering. In The Thirty-Fourth AAAI Con-
 ference on Artificial Intelligence, AAAI 2020,
-",Question: What is the license under which CLAPNQ is being released?,Answer: CLAPNQ is being released with an Apache 2.0 license.
+",Question: What license is CLAPNQ being released with?,Answer: CLAPNQ is being released with an Apache 2.0 license.
 75,"The Thirty-Second Innovative Applications of
 Artificial Intelligence Conference, IAAI 2020,
 The Tenth AAAI Symposium on Educational Ad-
@@ -7085,23 +7053,27 @@ Cambridge, UK.
 Sewon Min, Julian Michael, Hannaneh Hajishirzi,
 and Luke Zettlemoyer. 2020. AmbigQA: An-
 swering ambiguous open-domain questions. In
-","Proceedings of the 2020 Conference on Empir-
-ical Methods in Natural Language Processing
-(EMNLP), pages 8647–8658, Online. Associa-
-tion for Computational Linguistics.
+","Proceedings of the 58th Annual Meeting of the
+Association for Computational Linguistics,
+pages 3341–3353, Online. Association for Com-
+putational Linguistics.
 Sewon Min, Julian Michael, Hannaneh Hajishirzi,
-and Luke Zettlemoyer. 2021. NeurIPS 2020
-competition on efficientqa.
+and Luke Zettlemoyer. 2020. Ambigqa: An-
+swering ambiguous open-domain questions.
+In Proceedings of the 58th Annual Meeting of
+the Association for Computational Linguistics,
+pages 3341–3353, Online. Association for Com-
+putational Linguistics.
 Sewon Min, Julian Michael, Hannaneh Hajishirzi,
-and Luke Zettlemoyer. 2022. Efficientqa: A
-challenge for efficient question answering.
-In Proceedings of the 2022 Conference on Em-
-pirical Methods in Natural Language Pro-
-cessing (EMNLP), pages 10516–10527, Abu
-Dhabi, UAE. Association for Computational
-Linguistics.
+and Luke Zettlemoyer. 2020. Ambigqa: An-
+swering ambiguous open-domain questions.
+In Proceedings of the 58th Annual Meeting of
+the Association for Computational Linguistics,
+pages 3341–3353, Online. Association for Com-
+putational Linguistics.
+What is the title of the conference where the paper ""ELI5: Long form question answering"" was presented?
 
-Question: What is the title of the conference where the paper ""ELI5: Long form question answering"" was presented?",Answer: The 57th Annual Meeting of the Association for Computational Linguistics.
+(Note: I'll be happy to help you refine your question if needed)",Answer: Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics.
 76,"Proceedings of the 2020 Conference on Empir-
 ical Methods in Natural Language Processing
 (EMNLP), pages 5783–5797, Online. Associa-
@@ -7205,7 +7177,7 @@ Document-grounded Dialogue and Conversa-
 tional Question Answering, pages 8–29, Toronto,
 Canada. Association for Computational Linguis-
 tics.
-",Question: What is the title of the paper that introduced the SQuAD dataset?,"Answer: SQuAD: 100,000+ questions for machine comprehension of text."
+",Question: What is the name of the benchmark for knowledge-intensive language tasks introduced in 2021?,Answer: KILT
 77,"Figure 2: The Round 1 annotation task for CLAPNQ. The annotator had to select the title/sentences
 needed to answer the question, and then provide a concise answer.
 A
@@ -7262,7 +7234,7 @@ Please answer a question about this article.
 If
 the question is unanswerable, say “unanswerable”.
 user: {question}, answer:
-",Question: What platform was used to perform all annotation tasks?,Answer: Appen.
+",Question: What is the name of the platform used to perform all annotation tasks?,Answer: Appen.
 78,"Figure 3: The human evaluation task used to compare the model answers in random order. The individual
 questions per answer are shown here for one model.
 The GPT Prompt is based on chat completion from
@@ -7317,7 +7289,7 @@ tains a similar amount of data that needs to be cut
 off as in the other experiments at 317 and 346 for
 10https://huggingface.co/docs/transformers/model_
 doc/flan-t5
-",Question: What is the default learning rate used in the CLAPNQ-T5-LG model during training?,I don't know
+",Question: What is the batch size used in the training of the CLAPNQ-T5-LG model?,Question: What is the batch size used in the training of the CLAPNQ-T5-LG model?
 79,"Figure 4: The Round 2 annotation task for CLAPNQ. The annotator had to verify and update the answer
 provided in Round 1 if needed. They also had to provide how they edited the answer.
 the E5-CLAPNQ-T5-LG and E5-G-CLAPNQ-T5-
@@ -7329,9 +7301,9 @@ Examples
 We provide several examples of output comparing
 the various LLMs as described in Section 6. See
 Figures 8-16.
-","What is the batch size used for the experiments with the longer context size?
+","What is the batch size used in the experiments?
 
-(Note: The answer should be a specific, concise piece of factual information from the context.)","I don't know if you have seen the context before, but please answer the question based on the provided context."
+Question: What is the batch size used in the experiments?",Answer: 8
 80,"Figure 5: The human evaluation task used to compare the model answers in random order. The head-to-
 head comparison for win-rate is shown here.
 Question: who are the characters in the black cat
@@ -7362,7 +7334,7 @@ Reference
 No answer
 Table 8: This is an Unanswerable question that is actually partially answerable from the passage. It only
 mentions one character.
-",Question: What are the characters in the Black Cat?,Answer: Sephiria Arks is one of the characters in the Black Cat.
+",Question: Who are the characters in the Black Cat?,Answer: Sephiria Arks and Creed.
 81,"Question: what type of volcano is one tree hill
 Passage: Maungakiekie One Tree Hill Maungakiekie / One Tree Hill after the removal of the “ one tree ” .
 Highest point Elevation 182 m ( 597 ft ) Coordinates 36 °54 ’ 0 ” S 174 °46 ’ 59 ” E · / · 36.90000 °S 174.78306
@@ -7379,9 +7351,11 @@ No answer
 Table 9: This is a difficult example which confused most annotators during the human evaluation. It
 appears from the passage that the GPT answer may be correct but the answer is “scoria cone volcano”
 which is not in the passage.
-","The correct answer is: scoria cone volcano.
+","Answer: scoria cone volcano
 
-Question: What type of volcano is One Tree Hill?",Answer: scoria cone volcano.
+Here is your question:
+
+Question: What type of volcano is Maungakiekie One Tree Hill?",Answer: scoria cone volcano
 82,"Question: who is given credit for inventing the printing press
 Passage: The world ’s first movable type printing press technology for printing paper books was made of
 porcelain materials and was invented around AD 1040 in China during the Northern Song Dynasty by the
@@ -7417,7 +7391,7 @@ Europe.
 Table 10: The GPT and Mistral answers look good but are only partially faithful to the passage, because
 they does not give any credit to the innovation in China that is also mentioned in the passage. The GPT
 answer is also too long.
-",Question: Who is given credit for inventing the printing press?,Answer: Johannes Gutenberg and Bi Sheng.
+",Question: Who is given credit for inventing the printing press?,Answer: Johannes Gutenberg and Bi Sheng
 83,"Question: who played scotty in the new star trek movie
 Passage: Urban was born in Wellington , New Zealand . His father , a German immigrant , owned a leather
 goods store , and his mother once worked for Film Facilities in Wellington . Through his mother , the young
@@ -7434,7 +7408,7 @@ No answer
 Reference
 No answer
 Table 11: GPT finds the correct answer but it is not grounded in the document.
-","Here is your answer:
+","Create your question:
 
 Question: Who played Scotty in the new Star Trek movies?",Answer: Simon Pegg
 84,"Question: where would a commercial quantity of cobalt-60 be produced
@@ -7468,7 +7442,7 @@ It is produced artificially in nuclear reactors. Measurable quantities are also 
 nuclear power plant operation.
 Table 12: In this example the GPT and Mistral response are too long and have both irrelevant and extra
 information. Mistral is also hallucinating.
-",Question: Where would a commercial quantity of cobalt-60 be produced?,Answer: Nuclear reactors.
+",Question: Where are commercial quantities of cobalt-60 produced?,"Answer: In nuclear reactors and specialized facilities in countries such as Argentina, Canada, and Russia."
 85,"Question: where are nimbus clouds found in the sky
 Passage 1 (GOLD): Nimbostratus has a diffuse cloud base generally found anywhere from near surface in the
 low levels to about 3,000 m ( 9,800 ft ) in the middle level of the troposphere . Although usually dark at its base ,
@@ -7517,7 +7491,7 @@ Table 13: In this example we compare the responses when just the GOLD answer is 
 when only the gold answer is provided. In the non-RAG setting CLAPNQ-T5-LG and Mistral provided
 irrelevant information from the other passages about other clouds. All three missed the sentence that they
 can be found world-wide in the RAG setup.
-",Question: At what altitude are nimbostratus clouds typically found?,"Answer: from near surface in the low levels to about 3,000 m (9,800 ft) in the middle level of the troposphere."
+",Question: At what altitude are nimbostratus clouds generally found?,"Answer: Nimbostratus clouds are generally found anywhere from near the surface in the low levels to about 3,000 m (9,800 ft) in the middle level of the troposphere."
 86,"Question: who was glumdalclitch how did she help gulliver
 Responses
 GPT 3.5 Gold
@@ -7543,7 +7517,7 @@ Glumdalclitch is a nine-year-old, forty feet tall daughter of the farmer who cap
 her pet, created a bed for him out of a travel case and made him clothes.
 Table 14: An example that can be used with Table 15 to compare the GOLD setup with the RAG setup
 when the GOLD passage is not retrieved during RAG.
-",Question: What was Glumdalclitch's occupation or skill?,Answer: Glumdalclitch's occupation or skill was a skilled seamstress.
+",Question: What was Glumdalclitch's occupation or skill?,Answer: Glumdalclitch was a skilled seamstress.
 87,"Question: who was glumdalclitch how did she help gulliver
 Passage 1: When the Queen of Brobdingnag takes Gulliver into her court , he has Glumdalclitch brought to
 court with him . The prideful Gulliver thinks of himself as being greatly honored and promoted by moving
@@ -7574,7 +7548,7 @@ Glumdalclitch is a nine-year-old, forty feet tall daughter of the farmer who cap
 her pet, created a bed for him out of a travel case and made him clothes.
 Table 15: Alternative appropriate and relevant answers based on the retrieved passages compared to the
 GOLD setup in Table 14.
-",Question: What was Glumdalclitch's age when she took care of Gulliver?,Answer: 9 years old.
+",Question: What was Glumdalclitch's age when she helped Gulliver?,Answer: 9 years old.
 88,"Conversation
 User: why did the us demand trade with japan
 Passages
@@ -7613,4 +7587,4 @@ for Japan that could not continue its war effort with China without access to pe
 Table 16: Example of the RAG setting where all retrieved passages are irrelevant. The question asks
 about US demanding trade with Japan, while the passages talk about the reverse situation - US stopping
 (embargo) trade with Japan or Japan wanting trade.
-",Question: What percentage of its oil did Japan depend on the United States for?,Answer: 80 percent
+",Question: What percentage of its oil did Japan rely on the United States for?,Answer: 80 percent.
