@@ -10,9 +10,12 @@ import knowledgebase_manager as km
 
 
 GPT_3_5_TURBO = "GPT_3_5_TURBO"
-GPT_4 = ""
-GPT_4_PREVIEW = ""
+GPT_4 = "GPT_4_PREVIEW"
+GPT_4_PREVIEW = "GPT_4_PREVIEW"
 LOCAL_GPT4ALL = ""
+OLLAMA_LLAMA3 = "OLLAMA_LLAMA3"
+OLLAMA_LLAMA3_1 = "OLLAMA_LLAMA3.1"
+OLLAMA_GEMMA2 = "OLLAMA_GEMMA2"
 
 # Define the agent here
 class RAGAgent: 

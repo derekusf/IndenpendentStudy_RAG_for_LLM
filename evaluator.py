@@ -15,6 +15,11 @@ import document_handler as dc
 import llm_connector as myllm
 
 ARVIX_RAG_FOR_LLM = "ARVIX_RAG_FOR_LLM"
+GENERATOR_LLM = "OLLAMA_LLAMA3.1"
+ANSWER_LLM = "OLLAMA_LLAMA3.1"
+EVALUATE_LLM = "OLLAMA_LLAMA3.1"
+CRITIC_LLM = "OLLAMA_LLAMA3.1"
+GRADING_LLM = "GPT_3_5_TURBO"
 
 # Call function generate_question and generate_answer to generate a complete testset 
 # Output is a dataframe of a complete testset + save it to csv & json files for future use
@@ -34,11 +39,11 @@ def generate_testset(source_doc):
         testfile_json = "testset.json"
     pdf_documents = dc.load_directory(directory_path,"pdf")
 
-    generator_llm = myllm.connectLLM("LLAMA3_70B")
+    generator_llm = myllm.connectLLM(GENERATOR_LLM)
 
     question_context = generate_question(generator_llm, pdf_documents)
 
-    answer_llm = myllm.connectLLM("LLAMA3_70B")
+    answer_llm = myllm.connectLLM(ANSWER_LLM)
 
     question_ans_context = generate_answer(answer_llm,question_context)
 
@@ -133,9 +138,12 @@ def rag_evaluate(rag_pipeline):
 #    testset_df = testset_df.rename(columns={"answer" : "ground_truth"})
 #    testset_ds = testset_ds.rename_column("answer","ground_truth")
     test_outcome_list = test_rag_pipeline(rag_pipeline, testset_ds)
-    evaluate_llm = myllm.connectLLM("LLAMA3_70B")
+    evaluate_llm = myllm.connectLLM(EVALUATE_LLM)
     test_outcome_list = evaluate_by_metric(evaluate_llm,test_outcome_list,"answer_relevancy")
     test_outcome_list = evaluate_by_metric(evaluate_llm,test_outcome_list,"faithfulness")
+
+    grading_llm = myllm.connectLLM(GRADING_LLM)
+    test_outcome_list = grading(grading_llm,test_outcome_list)
 
     return test_outcome_list
 
@@ -244,3 +252,63 @@ def test_rag_pipeline(rag_pipeline, testset_ds):
     test_outcome_ds = Dataset.from_pandas(pd.DataFrame(test_outcome_list))
     print(f"evaluator.py log >>> End testing with {len(test_outcome_ds)} answers on {len(testset_ds)} question")
     return test_outcome_list
+
+# Get grades for the whole list
+def grading(grading_llm, test_outcome_list):
+    grading_output_parser = StrOutputParser() 
+    prompt =  myprompt.initPrompt(myprompt.GRADING)
+
+    grading_chain = (
+        {"comment": itemgetter("comment")}
+        | prompt 
+        | grading_llm 
+        | grading_output_parser
+    )
+
+    #### GRADING RELEVANCY ####
+    print(f"evaluator.py log >>> START GRADING RELEVANCY")
+    i = 1
+    for record in tqdm(test_outcome_list):
+        try:
+            response = grading_chain.invoke({"comment":record["answer_relevancy"]})
+            response = float(response)
+        except Exception as e:
+            print(f"Exception at {i} {e}")
+            i=i+1
+            continue
+        record["answer_relevancy_grade"] = response
+        i=i+1
+    
+    print(f"evaluator.py log >>> COMPLETE GRADING RELEVANCY")
+
+    #### GRADING FAITHFULNESS ####
+    print(f"evaluator.py log >>> START GRADING FAITHFULNESS")
+    i = 1
+    for record in tqdm(test_outcome_list):
+        try:
+            response = grading_chain.invoke({"comment":record["faithfulness"]})
+            response = float(response)
+        except Exception as e:
+            print(f"Exception at {i} {e}")
+            i=i+1
+            continue
+        record["faithfulness_grade"] = response
+        i=i+1
+    
+    print(f"evaluator.py log >>> COMPLETE GRADING FAITHFULNESS")
+
+    return test_outcome_list
+
+# Get grade for a single comment
+def grading_comment(grading_llm, comment):
+    grading_output_parser = StrOutputParser() 
+    prompt =  myprompt.initPrompt(myprompt.GRADING)
+
+    grading_chain = (
+        {"comment": itemgetter("comment")}
+        | prompt 
+        | grading_llm 
+        | grading_output_parser
+    )
+
+    return grading_chain.invoke({"comment":comment})
